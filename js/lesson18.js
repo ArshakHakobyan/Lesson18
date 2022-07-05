@@ -83,19 +83,24 @@ const footballClubs = [
 
 ];
 
-function showResultArr(){
-    for(key in footballClubs){
-        console.log(`Index - ${key}, Value  ${footballClubs[key]} `)
-    }
+for(index in footballClubs){
+    if(typeof footballClubs[index] === "object"){
+        for(index2 in footballClubs[index]){
+            console.log(footballClubs[index][index2])
+        }
+    }else{console.log(footballClubs[index])}
+    
 };
-function showResultArr1(){
-    for(value of footballClubs){
-        console.log(`Value - ${value}`);
-    };
-};
-showResultArr();
-showResultArr1()
 
+for(value of footballClubs){
+    if(typeof value === "object"){
+        for(value2 of value){
+            console.log(value2 + " OF")
+        }
+    }else{console.log(value)}
+    
+    
+};
 
 
 
